@@ -1,0 +1,15 @@
+<!DOCTYPE hdml>
+<hdml>
+<head>
+<meta charset="utf-8"
+<meta name="viewreport"content="width-device-width"
+<title>velammal global</title>
+<link href="style.css"rel="-"stylesheet" type="text/css"/>
+ </head>
+ <body>
+<h1>address:medavakkam ,chennai,vgp prubu nagar </h1>
+<h2>no.of students enroled:3000</h2>
+<h3>streams offered:"science,commerce and humanities</h3>
+<h4>educational board:international</h4>
+</body>
+</hdml>
