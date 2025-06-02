@@ -1,0 +1,21 @@
+h1{
+    COLOR:dark blue;
+text-align: center;}
+h2,p{
+color:dark green;
+}
+h1{
+    color:brown;
+}
+.highlight{
+    background-color:blueviolet;
+}
+#unique{
+    font-weight:bold;
+}
+h2,p{
+    color:bisque;
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
