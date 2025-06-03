@@ -1,0 +1,30 @@
+h1 {
+    color: pink;
+    text-align: center;
+}
+
+h2,
+p {
+    color: orange;
+}
+
+h1 {
+    color: pink;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+#unique {
+    font-weight: bold;
+}
+
+h2,
+p {
+    color: orange;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
