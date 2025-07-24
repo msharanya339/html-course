@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMax() {
+            var max = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        document.write("Max: " + findMax(1,7,3,9,20,59,27,81,68,10,48) + "<br>");
+
+        // Sum of arguments function
+        function sumArguments() {
+            var sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.write("Sum: "  + sumarguments(1, 7, 3, 9, 20, 59, 27, 81, 68, 10, 48));
+        </script>
+    
+</body>
+</html>
