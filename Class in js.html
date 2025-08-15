@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes in JavaScript</title>
+</head>
+<body>
+    <h1>Classes in JavaScript</h1>
+    <p id="output"></p>
+    <script>
+        
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+            }
+        }
+        const person1 = new Person("Sharanya", 12);
+        document.getElementById("output").textContent = person1.greet();
+    </script>
+</body>
+</html>
