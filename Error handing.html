@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Error handling</h2>
+    <p id ="message"></p>
+    <p id="err_message"></p>
+    <script>
+        function subtract2(a,b){
+            return a-b
+        }
+        subtract = (a,b) => a=b;
+        try {
+            document.getElementById("message").innerHTML = subtract(10 ,40) 
+            demo("welcome to coding")
+        
+        }
+        catch(err) {
+            document.getElementById("err_message").innerHTL = err.message;
+        }
+    </script>
+</body>
+</html>
