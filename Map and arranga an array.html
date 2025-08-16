@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <h2>Javascript Array sorting and reversing</h2>
+    <p>Click on the buttons to try it out</p>
+    <button onclick="ascending()">Ascending</button>
+    <button onclick="descending()">Descending</button>
+    <p id="sortResult"></p>
+
+    <hr>
+
+    
+    <script>
+        
+        let numbers = [40, 50, 10, 20, 60, 70, 30];
+        document.getElementById("sortResult").innerHTML = numbers;
+
+        function ascending(){
+            numbers.sort(function(a, b) {return a - b});
+            document.getElementById('sortResult').innerHTML = numbers;
+        }
+
+        function descending(){
+            numbers.sort(function(a, b) {return b - a});
+            document.getElementById('sortResult').innerHTML = numbers;
+        }
+
+    
+
+    
+    </script>
+</body>
+</html>
