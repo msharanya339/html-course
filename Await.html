@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User Data Fetcher</h1>
+    <button id="fetchbtn" type="button">Fetch user data</button>
+    <div id="userData"></div>
+    <script>
+        async function fetchuserdata(a, b) {
+            try {
+                let response = await new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(`Fetched user data with values: ${a}, ${b}`);
+                    }, 1000);
+                });
+                display(response);
+            } catch (error) {
+                display('Error fetching user data');
+                console.error(error);
+            }
+        }
+        function display(text) {
+            document.getElementById('userData').innerHTML = text;
+        }
+        document.getElementById('fetchbtn').addEventListener('click', function() {
+            fetchuserdata(60, 50);
+        });
+    </script>
+</body>
+</html>
