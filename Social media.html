@@ -3,27 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Social Media Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #c0ea27, #77e37e);
+            padding: 20px;
+        }
+        
+        .social-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+        
+        .social-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .social-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-name {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .linkedin {
+            background: linear-gradient(135deg, #0077b5, #00a0dc);
+        }
+        
+        .github {
+            background: linear-gradient(135deg, #333, #0a001a);
+        }
+        
+        .youtube {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+        
+        .email {
+            background: linear-gradient(135deg, #ea4335, #3636d1);
+        }
+        
+        
+    </style>
 </head>
 <body>
     <div class="social-container">
-        <h2>Social Media</h2>
+        <h1 class="social-title">Social Media</h1>
+        <p class="social-subtitle">Social media platforms</p>
+        
         <div class="social-icons">
             <div class="social-item">
-                <a href="https://www.facebook.com/" target="_blank">
-                    <i class="fa-brands fa-square-facebook fa-2x"></i>
-                    <span class="social-names">Facebook</span>
+                <a href="https://in.linkedin.com/" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
+                <span class="social-name">LinkedIn</span>
             </div>
+            
             <div class="social-item">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <i class="fa-brands fa-square-instagram fa-2x"></i>
-                    <span class="social-names">Instagram</span>
+                <a href="https://github.com/" class="social-icon github">
+                    <i class="fab fa-github"></i>
                 </a>
+                <span class="social-name">Github</span>
+            </div>
+            
+            <div class="social-item">
+                <a href="https://www.youtube.com/" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <span class="social-name">YouTube</span>
+            </div>
+            
+            <div class="social-item">
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="social-icon email">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <span class="social-name">Email</span>
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/10c0c17f10.js" crossorigin="anonymous"></script>
 </body>
 </html>
