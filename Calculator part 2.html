@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App - Income & Expense Tracker</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg,#0a0abe,#14da60);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        #container {
+            background-color: purple;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgb(70,69,69);
+            width: 350px;
+        }
+        #bankApp {
+            color: wheat;
+            text-align: center;
+        }
+        input button {
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1em;
+        }
+        button {
+            background: #14da60;
+            color: #fff;
+            cursor: pointer;
+        }
+        .history {
+            margin-top: 20px;
+            text-align: left;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 10px;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="bankApp">
+            <h2>Bank App</h2>
+            <div>
+                <strong>Balance: ₹<span id="balance">0</span></strong>
+            </div>
+            <form id="transactionForm">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+            <div class="history" id="history">
+                <strong>History:</strong>
+                <ul id="historyList"></ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const balanceEl = document.getElementById('balance');
+        const form = document.getElementById('transactionForm');
+        const amountEl = document.getElementById('amount');
+        const typeEl = document.getElementById('type');
+        const historyList = document.getElementById('historyList');
+        let balance = 0;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const amount = parseFloat(amountEl.value);
+            const type = typeEl.value;
+            if (type ='income') {
+                balance += amount;
+                addHistory(`Income: ₹${amount}`);
+            } else {
+                balance -= amount;
+                addHistory(`Expense: ₹${amount}`);
+            }
+            balanceEl.textContent = balance;
+            amountEl.value = '';
+        });
+
+        function addHistory(text) {
+            const li = document.createElement('li');
+            li.textContent = text;
+            historyList.appendChild(li);
+        }
+    </script>
+</body>
+</html>
